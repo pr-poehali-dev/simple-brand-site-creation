@@ -4,10 +4,10 @@ import Navbar from '@/components/Navbar';
 import Icon from '@/components/ui/icon';
 
 const values = [
-  { icon: 'Heart', label: 'Поддержка', desc: 'Мы рядом на каждом шаге обучения' },
-  { icon: 'Lightbulb', label: 'Инновации', desc: 'ИИ и современные методики в основе' },
-  { icon: 'Shield', label: 'Честность', desc: 'Открытость в результатах и процессе' },
-  { icon: 'Rocket', label: 'Рост', desc: 'Постоянное развитие — наш принцип' },
+  { icon: 'HandHeart', label: 'Поддержка', desc: 'Мы рядом на каждом шаге обучения' },
+  { icon: 'Sparkles', label: 'Инновации', desc: 'ИИ и современные методики в основе' },
+  { icon: 'ShieldCheck', label: 'Честность', desc: 'Открытость в результатах и процессе' },
+  { icon: 'TrendingUp', label: 'Рост', desc: 'Постоянное развитие — наш принцип' },
 ];
 
 const team = [
@@ -75,7 +75,7 @@ export default function Team() {
       <section className="pt-32 pb-16 px-6 text-center">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 text-xs font-semibold tracking-widest uppercase"
           style={{ background: 'rgba(124,58,237,0.12)', border: '1px solid rgba(124,58,237,0.25)', color: '#A855F7' }}>
-          <Icon name="Users" size={13} />
+          <Icon name="UsersRound" size={13} />
           Наша команда
         </div>
         <h1 className="font-black text-5xl md:text-6xl tracking-tight mb-4 animate-fade-in-up">
@@ -178,7 +178,7 @@ export default function Team() {
               <p className="text-white/50 text-base mb-6">Мы всегда в поиске талантливых людей, разделяющих нашу миссию.</p>
               <Link to="/contact"
                 className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-bold text-sm text-[#0B0F1A] gradient-teal-purple hover:scale-105 active:scale-95 transition-transform duration-200 glow-teal">
-                Написать нам <Icon name="ArrowRight" size={16} />
+                Написать нам <Icon name="MoveRight" size={16} />
               </Link>
             </div>
           </div>

@@ -15,7 +15,7 @@ const courses = [
     students: '12 400',
     rating: 4.9,
     price: 'Бесплатно',
-    icon: 'Code',
+    icon: 'Terminal',
     color: 'teal',
     tags: ['Python', 'Backend', 'Алгоритмы'],
   },
@@ -28,7 +28,7 @@ const courses = [
     students: '8 200',
     rating: 4.8,
     price: '2 990 ₽/мес',
-    icon: 'Users',
+    icon: 'UsersRound',
     color: 'purple',
     tags: ['Лидерство', 'Коммуникация', 'Мотивация'],
   },
@@ -41,7 +41,7 @@ const courses = [
     students: '9 800',
     rating: 4.7,
     price: '1 990 ₽/мес',
-    icon: 'Palette',
+    icon: 'PenTool',
     color: 'teal',
     tags: ['Figma', 'UI/UX', 'Дизайн'],
   },
@@ -54,7 +54,7 @@ const courses = [
     students: '5 600',
     rating: 4.9,
     price: '990 ₽/мес',
-    icon: 'Mic',
+    icon: 'Mic2',
     color: 'purple',
     tags: ['Риторика', 'Публичность', 'Уверенность'],
   },
@@ -67,7 +67,7 @@ const courses = [
     students: '15 000',
     rating: 5.0,
     price: 'Бесплатно',
-    icon: 'Gamepad2',
+    icon: 'Blocks',
     color: 'teal',
     tags: ['Scratch', 'Логика', 'Алгоритмы'],
   },
@@ -80,7 +80,7 @@ const courses = [
     students: '6 300',
     rating: 4.8,
     price: '4 990 ₽/мес',
-    icon: 'BarChart2',
+    icon: 'ChartNoAxesCombined',
     color: 'purple',
     tags: ['ML', 'Python', 'Аналитика'],
   },
@@ -103,7 +103,7 @@ export default function Courses() {
       <section className="pt-32 pb-16 px-6 text-center">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 text-xs font-semibold tracking-widest uppercase"
           style={{ background: 'rgba(0,218,200,0.1)', border: '1px solid rgba(0,218,200,0.25)', color: '#00DAC8' }}>
-          <Icon name="BookOpen" size={13} />
+          <Icon name="LayoutGrid" size={13} />
           Каталог курсов
         </div>
         <h1 className="font-black text-5xl md:text-6xl tracking-tight mb-4 animate-fade-in-up">
@@ -191,13 +191,13 @@ export default function Courses() {
               <div className="px-6 pb-6">
                 <div className="flex items-center justify-between text-xs text-white/40 mb-4 pt-4 border-t border-white/5">
                   <span className="flex items-center gap-1">
-                    <Icon name="Clock" size={12} /> {course.duration}
+                    <Icon name="Timer" size={12} /> {course.duration}
                   </span>
                   <span className="flex items-center gap-1">
-                    <Icon name="Users" size={12} /> {course.students}
+                    <Icon name="GraduationCap" size={12} /> {course.students}
                   </span>
                   <span className="flex items-center gap-1 text-yellow-400">
-                    <Icon name="Star" size={12} /> {course.rating}
+                    <Icon name="Trophy" size={12} /> {course.rating}
                   </span>
                 </div>
                 <button

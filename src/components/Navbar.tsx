@@ -124,7 +124,7 @@ export default function Navbar() {
               </div>
               <div className="px-4 py-3 border-t border-white/5">
                 <Link to="/courses" className="flex items-center gap-2 text-xs text-[#00DAC8] font-semibold hover:gap-3 transition-all duration-200">
-                  Все курсы <Icon name="ArrowRight" size={12} />
+                  Все курсы <Icon name="MoveRight" size={12} />
                 </Link>
               </div>
             </div>

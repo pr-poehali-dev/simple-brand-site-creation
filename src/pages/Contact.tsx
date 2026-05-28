@@ -3,9 +3,9 @@ import Navbar from '@/components/Navbar';
 import Icon from '@/components/ui/icon';
 
 const contacts = [
-  { icon: 'Mail', label: 'Email', value: 'hello@skillcore.ru', color: 'teal' },
-  { icon: 'MessageCircle', label: 'Telegram', value: '@skillcore', color: 'purple' },
-  { icon: 'Phone', label: 'Телефон', value: '+7 (800) 555-35-35', color: 'teal' },
+  { icon: 'MailOpen', label: 'Email', value: 'hello@skillcore.ru', color: 'teal' },
+  { icon: 'MessageSquare', label: 'Telegram', value: '@skillcore', color: 'purple' },
+  { icon: 'PhoneCall', label: 'Телефон', value: '+7 (800) 555-35-35', color: 'teal' },
 ];
 
 const faqs = [
@@ -61,7 +61,7 @@ export default function Contact() {
       <section className="pt-32 pb-12 px-6 text-center">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 text-xs font-semibold tracking-widest uppercase"
           style={{ background: 'rgba(0,218,200,0.1)', border: '1px solid rgba(0,218,200,0.25)', color: '#00DAC8' }}>
-          <Icon name="Send" size={13} />
+          <Icon name="MessageSquareDot" size={13} />
           Связаться с нами
         </div>
         <h1 className="font-black text-5xl md:text-6xl tracking-tight mb-4 animate-fade-in-up">
@@ -134,7 +134,7 @@ export default function Contact() {
               {status === 'success' ? (
                 <div className="flex flex-col items-center justify-center h-full py-16 text-center">
                   <div className="w-16 h-16 rounded-full gradient-teal-purple flex items-center justify-center mb-5 glow-teal animate-scale-in">
-                    <Icon name="Check" size={30} className="text-[#0B0F1A]" />
+                    <Icon name="CircleCheck" size={30} className="text-[#0B0F1A]" />
                   </div>
                   <h3 className="font-black text-2xl mb-2">Сообщение отправлено!</h3>
                   <p className="text-white/50 text-sm max-w-xs mb-6">Мы ответим в течение 24 часов. Спасибо, что написали нам!</p>
@@ -213,7 +213,7 @@ export default function Contact() {
                       </>
                     ) : (
                       <>
-                        <Icon name="Send" size={18} />
+                        <Icon name="SendHorizonal" size={18} />
                         Отправить сообщение
                       </>
                     )}
