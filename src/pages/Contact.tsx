@@ -3,9 +3,9 @@ import Navbar from '@/components/Navbar';
 import Icon from '@/components/ui/icon';
 
 const contacts = [
-  { icon: 'MailOpen', label: 'Email', value: 'hello@skillcore.ru', color: 'teal' },
-  { icon: 'MessageSquare', label: 'Telegram', value: '@skillcore', color: 'purple' },
-  { icon: 'PhoneCall', label: 'Телефон', value: '+7 (800) 555-35-35', color: 'teal' },
+  { icon: 'MailOpen', label: 'Email', value: 'fiffifa2024@gmail.com', color: 'teal' },
+  { icon: 'MessageSquare', label: 'Telegram', value: '@Mmm_7778mm', color: 'purple' },
+  { icon: 'PhoneCall', label: 'Телефон', value: '+7 (967) 029-01-10', color: 'teal' },
 ];
 
 const faqs = [
