@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
+import Navbar from '@/components/Navbar';
 
 const HERO_IMAGE = "https://cdn.poehali.dev/projects/6d70cd4d-2dc8-4c71-8336-3cec1b5f5ca2/files/b51ba7c2-3fdd-4fac-8c09-15d965d6edd6.jpg";
 
@@ -55,8 +57,6 @@ const audiences = [
   { icon: "Search", label: "Работодатели", desc: "Поиск по навыкам, портфолио кандидатов" },
 ];
 
-const navLinks = ["Курсы", "Преимущества", "О платформе", "Отзывы"];
-
 export default function Index() {
   return (
     <div className="min-h-screen bg-[#0B0F1A] text-white overflow-x-hidden">
@@ -66,27 +66,7 @@ export default function Index() {
       <div className="fixed top-[20%] right-[-150px] w-[500px] h-[500px] rounded-full bg-[#7C3AED] opacity-[0.06] blur-[100px] pointer-events-none" />
       <div className="fixed bottom-[10%] left-[30%] w-[400px] h-[400px] rounded-full bg-[#00DAC8] opacity-[0.03] blur-[80px] pointer-events-none" />
 
-      {/* NAVBAR */}
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 py-4"
-        style={{ background: 'rgba(11,15,26,0.85)', backdropFilter: 'blur(20px)', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg gradient-teal-purple flex items-center justify-center font-black text-sm text-[#0B0F1A]">S</div>
-          <span className="font-black text-xl tracking-tight" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-            Skill<span className="text-gradient">Core</span>
-          </span>
-        </div>
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map(link => (
-            <a key={link} href="#" className="text-sm text-white/60 hover:text-white transition-colors duration-200">{link}</a>
-          ))}
-        </div>
-        <button className="hidden md:block px-5 py-2 rounded-full text-sm font-semibold text-[#0B0F1A] gradient-teal-purple hover:opacity-90 transition-opacity">
-          Начать бесплатно
-        </button>
-        <button className="md:hidden text-white/60">
-          <Icon name="Menu" size={22} />
-        </button>
-      </nav>
+      <Navbar />
 
       {/* HERO */}
       <section className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-24 pb-16 text-center">
@@ -108,14 +88,14 @@ export default function Index() {
         </p>
 
         <div className="animate-fade-in-up-delay-3 flex flex-col sm:flex-row gap-4 mb-16">
-          <button className="px-8 py-4 rounded-full font-bold text-base text-[#0B0F1A] gradient-teal-purple glow-teal hover:scale-105 transition-transform duration-200">
+          <Link to="/contact" className="px-8 py-4 rounded-full font-bold text-base text-[#0B0F1A] gradient-teal-purple glow-teal hover:scale-105 active:scale-95 transition-transform duration-200 text-center">
             Начать бесплатно
-          </button>
-          <button className="px-8 py-4 rounded-full font-semibold text-base text-white/80 hover:text-white transition-colors duration-200 flex items-center gap-2 justify-center"
+          </Link>
+          <Link to="/courses" className="px-8 py-4 rounded-full font-semibold text-base text-white/80 hover:text-white active:scale-95 transition-all duration-200 flex items-center gap-2 justify-center"
             style={{ border: '1px solid rgba(255,255,255,0.12)' }}>
             <Icon name="Play" size={16} />
-            Смотреть демо
-          </button>
+            Смотреть курсы
+          </Link>
         </div>
 
         {/* Hero image */}
@@ -216,9 +196,9 @@ export default function Index() {
               <p className="text-white/60 text-lg mb-8 max-w-xl mx-auto">
                 Присоединяйся к 50 000 студентов. Первый месяц — бесплатно.
               </p>
-              <button className="px-10 py-4 rounded-full font-bold text-lg text-[#0B0F1A] gradient-teal-purple glow-teal hover:scale-105 transition-transform duration-200">
+              <Link to="/contact" className="inline-block px-10 py-4 rounded-full font-bold text-lg text-[#0B0F1A] gradient-teal-purple glow-teal hover:scale-105 active:scale-95 transition-transform duration-200">
                 Зарегистрироваться бесплатно
-              </button>
+              </Link>
               <p className="text-white/30 text-xs mt-4">Без привязки карты. Отменить можно в любой момент.</p>
             </div>
           </div>
