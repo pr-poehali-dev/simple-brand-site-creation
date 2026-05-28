@@ -32,14 +32,25 @@ export default function Contact() {
     return Object.keys(e).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
     setStatus('loading');
-    setTimeout(() => {
-      setStatus('success');
-      setForm({ name: '', email: '', message: '' });
-    }, 1400);
+    try {
+      const res = await fetch('https://functions.poehali.dev/5e91fc90-cde6-4174-a35c-ff810f41e2ea', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      if (res.ok) {
+        setStatus('success');
+        setForm({ name: '', email: '', message: '' });
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
   };
 
   const inputBase = "w-full px-4 py-3.5 rounded-xl text-sm text-white placeholder-white/30 outline-none transition-all duration-200";
@@ -131,6 +142,13 @@ export default function Contact() {
             <div className="rounded-2xl p-6 md:p-8 h-full"
               style={{ background: 'rgba(17,24,39,0.7)', border: '1px solid rgba(255,255,255,0.07)' }}>
 
+              {status === 'error' && (
+                <div className="mb-4 px-4 py-3 rounded-xl text-sm text-red-400 flex items-center gap-2"
+                  style={{ background: 'rgba(239,68,68,0.08)', border: '1px solid rgba(239,68,68,0.2)' }}>
+                  <Icon name="AlertCircle" size={16} />
+                  Ошибка отправки. Проверьте интернет-соединение или напишите напрямую на почту.
+                </div>
+              )}
               {status === 'success' ? (
                 <div className="flex flex-col items-center justify-center h-full py-16 text-center">
                   <div className="w-16 h-16 rounded-full gradient-teal-purple flex items-center justify-center mb-5 glow-teal animate-scale-in">
